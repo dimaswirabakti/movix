@@ -1,0 +1,13 @@
+# Kredensial & environment
+.env
+
+# Dependencies
+/vendor/
+
+# Sampah OS
+.DS_Store
+.vscode/
+.idea/
+
+# Log
+*.log
