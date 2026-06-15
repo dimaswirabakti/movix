@@ -33,6 +33,7 @@ CREATE TABLE movies (
     director VARCHAR(120),
     synopsis TEXT,
     poster_url VARCHAR(500),
+    backdrop_url VARCHAR(500),
     avg_rating DECIMAL(3, 1) NOT NULL DEFAULT 0.0,
     review_count INT UNSIGNED NOT NULL DEFAULT 0,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,

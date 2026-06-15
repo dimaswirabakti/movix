@@ -305,3 +305,88 @@ VALUES (1, 1),
     (2, 3),
     (3, 6),
     (3, 9);
+
+-- Update poster & backdrop untuk semua 12 film
+UPDATE movies
+SET
+    poster_url = 'https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg',
+    backdrop_url = 'https://image.tmdb.org/t/p/w1280/kXfqcdQKsToO0OUXHcrrNCHDBzO.jpg'
+WHERE
+    id = 1;
+
+UPDATE movies
+SET
+    poster_url = 'https://image.tmdb.org/t/p/w500/d4KNaTrltq6bpkFS01pYtyXa09m.jpg',
+    backdrop_url = 'https://image.tmdb.org/t/p/w1280/6xKCYgH16UuwEGAyroLU6p8HLIn.jpg'
+WHERE
+    id = 2;
+
+UPDATE movies
+SET
+    poster_url = 'https://image.tmdb.org/t/p/w500/1hRoyzDtpgMU7Dz4JF22RANzQO7.jpg',
+    backdrop_url = 'https://image.tmdb.org/t/p/w1280/nnMC0BM6XbjIIrT4miYmMtPGcQV.jpg'
+WHERE
+    id = 3;
+
+UPDATE movies
+SET
+    poster_url = 'https://image.tmdb.org/t/p/w500/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg',
+    backdrop_url = 'https://image.tmdb.org/t/p/w1280/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg'
+WHERE
+    id = 4;
+
+UPDATE movies
+SET
+    poster_url = 'https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg',
+    backdrop_url = 'https://image.tmdb.org/t/p/w1280/s3TBrRGB1iav7gFOCNx3H31MoES.jpg'
+WHERE
+    id = 5;
+
+UPDATE movies
+SET
+    poster_url = 'https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg',
+    backdrop_url = 'https://image.tmdb.org/t/p/w1280/TU9NIjwzjoKPwQHoHshkFcQUCG.jpg'
+WHERE
+    id = 6;
+
+UPDATE movies
+SET
+    poster_url = 'https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg',
+    backdrop_url = 'https://image.tmdb.org/t/p/w1280/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg'
+WHERE
+    id = 7;
+
+UPDATE movies
+SET
+    poster_url = 'https://image.tmdb.org/t/p/w500/gynBNzwyaHKtXqlEKKLioNkjKgN.jpg',
+    backdrop_url = 'https://image.tmdb.org/t/p/w1280/yQeEMjnBOIAtFqIuEphyesH0a6y.jpg'
+WHERE
+    id = 8;
+
+UPDATE movies
+SET
+    poster_url = 'https://image.tmdb.org/t/p/w500/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg',
+    backdrop_url = 'https://image.tmdb.org/t/p/w1280/Ab8mkHmkYADjU7wQiOkia9BzGvS.jpg'
+WHERE
+    id = 9;
+
+UPDATE movies
+SET
+    poster_url = 'https://image.tmdb.org/t/p/w500/7fn624j5lj3xTme2SgiLCeuedmO.jpg',
+    backdrop_url = 'https://image.tmdb.org/t/p/w1280/fRGxZuo7jJUWQsVg9PREb98Aclp.jpg'
+WHERE
+    id = 10;
+
+UPDATE movies
+SET
+    poster_url = 'https://image.tmdb.org/t/p/w500/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg',
+    backdrop_url = 'https://image.tmdb.org/t/p/w1280/mbIRPgMaDCBuSAiHpRsXPm8DnGx.jpg'
+WHERE
+    id = 11;
+
+UPDATE movies
+SET
+    poster_url = 'https://image.tmdb.org/t/p/w500/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg',
+    backdrop_url = 'https://image.tmdb.org/t/p/w1280/6WBIzCgmDCYrqh64yDREGeDk9d3.jpg'
+WHERE
+    id = 12;
