@@ -1,0 +1,13 @@
+.navbar-brand {
+  letter-spacing: 0.5px;
+}
+
+.card {
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
