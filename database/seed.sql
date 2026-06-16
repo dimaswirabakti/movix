@@ -316,8 +316,8 @@ WHERE
 
 UPDATE movies
 SET
-    poster_url = 'https://image.tmdb.org/t/p/w500/d4KNaTrltq6bpkFS01pYtyXa09m.jpg',
-    backdrop_url = 'https://image.tmdb.org/t/p/w1280/6xKCYgH16UuwEGAyroLU6p8HLIn.jpg'
+    poster_url = 'https://image.tmdb.org/t/p/original/xwrCI0EWKNjJNYXpyHkIlILSM0s.jpg',
+    backdrop_url = 'https://image.tmdb.org/t/p/original/vDACQOBMpdwrcpKfnNrdg1z9MGq.jpg'
 WHERE
     id = 2;
 
@@ -358,8 +358,8 @@ WHERE
 
 UPDATE movies
 SET
-    poster_url = 'https://image.tmdb.org/t/p/w500/gynBNzwyaHKtXqlEKKLioNkjKgN.jpg',
-    backdrop_url = 'https://image.tmdb.org/t/p/w1280/yQeEMjnBOIAtFqIuEphyesH0a6y.jpg'
+    poster_url = 'https://image.tmdb.org/t/p/original/foAVhLSrLahKj1DX4MJNwetTGiW.jpg',
+    backdrop_url = 'https://image.tmdb.org/t/p/original/ncEsesgOJDNrTUED89hYbA117wo.jpg'
 WHERE
     id = 8;
 
