@@ -60,17 +60,3 @@ function db(): PDO
 
     return $pdo;
 }
-
-// Beberapa helper function umum
-
-// Escape teks sebelum ditampilkan, mencegah XSS (htmlspecialchars)
-function e(?string $value): string
-{
-    return htmlspecialchars($value ?? '', ENT_QUOTES, 'UTF-8');
-}
-
-// Untuk cek apakah ada user yang sedang login. dipakai di navbar n proteksi halaman
-function is_logged_in(): bool
-{
-    return isset($_SESSION['user_id']);
-}

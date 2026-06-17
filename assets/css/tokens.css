@@ -1,0 +1,102 @@
+/* =========================================================
+   Design Tokens
+   Override Bootstrap 5.3 lewat CSS variables + komponen kustom
+   ========================================================= */
+
+:root {
+  --ink: #0e0e12;
+  --charcoal: #17171f;
+  --slate: #262630;
+  --brass: #e0a92e;
+  --brass-soft: #f0c45e;
+  --cream: #f2ece0;
+  --ash: #a6a199;
+  --moss: #6fa86a;
+  --sky: #5c9cc9;
+  --rust: #c0563f;
+
+  --font-display: "Fraunces", serif;
+  --font-body: "Hanken Grotesk", sans-serif;
+  --font-mono: "Space Mono", monospace;
+
+  /* Override token Bootstrap */
+  --bs-body-bg: var(--ink);
+  --bs-body-color: var(--cream);
+  --bs-body-font-family: var(--font-body);
+  --bs-emphasis-color: var(--cream);
+  --bs-border-color: var(--slate);
+  --bs-link-color: var(--brass);
+  --bs-link-hover-color: var(--brass-soft);
+
+  /* Pemetaan warna brand ke variabel theme Bootstrap */
+  --bs-primary: var(--brass);
+  --bs-primary-rgb: 224, 169, 46;
+  --bs-warning: var(--brass);
+  --bs-warning-rgb: 224, 169, 46;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--ink);
+  color: var(--cream);
+}
+
+/* Tipografi */
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+.font-mono {
+  font-family: var(--font-mono);
+}
+.text-brass {
+  color: var(--brass) !important;
+}
+.text-cream {
+  color: var(--cream) !important;
+}
+.text-ash {
+  color: var(--ash) !important;
+}
+
+/* Label kecil di atas judul section */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brass);
+  margin-bottom: 0.35rem;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.25rem);
+  color: var(--cream);
+  margin: 0;
+}
+
+/* Metadata & rating selalu mono */
+.meta {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ash);
+}
+.rating {
+  font-family: var(--font-mono);
+  color: var(--brass);
+  font-weight: 700;
+}
+.rating .bi {
+  font-size: 0.85em;
+}
