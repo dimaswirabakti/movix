@@ -1,0 +1,238 @@
+.auth-body {
+  min-height: 100vh;
+}
+.auth-split {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 992px) {
+  .auth-split {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Panel kiri (gambar/gradien sinematik) */
+.auth-aside {
+  position: relative;
+  display: none;
+  padding: 2.5rem;
+  overflow: hidden;
+  background: linear-gradient(160deg, #2a1416, #0e0e12 70%);
+}
+@media (min-width: 992px) {
+  .auth-aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+.auth-aside::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      70% 50% at 30% 30%,
+      rgba(192, 86, 63, 0.32),
+      transparent 60%
+    ),
+    radial-gradient(
+      80% 60% at 40% 100%,
+      rgba(224, 169, 46, 0.3),
+      transparent 60%
+    );
+}
+.auth-aside--login {
+  background-color: #0e0e12;
+  background-image:
+    linear-gradient(160deg, rgba(20, 8, 10, .5), rgba(14, 14, 18, .82) 78%),
+    url('/assets/img/auth-login.png');
+  background-size: cover;
+  background-position: center;
+}
+.auth-aside--register {
+  background-color: #0e0e12;
+  background-image:
+    linear-gradient(160deg, rgba(14, 14, 18, .4), rgba(14, 14, 18, .82) 78%),
+    url('/assets/img/auth-register.png');
+  background-size: cover;
+  background-position: center;
+}
+.auth-aside--register::before {
+  background: radial-gradient(
+    80% 60% at 35% 100%,
+    rgba(224, 169, 46, 0.28),
+    transparent 60%
+  );
+}
+.auth-aside > * {
+  position: relative;
+  z-index: 1;
+}
+.auth-aside__caption {
+  max-width: 30rem;
+}
+.auth-aside__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2rem, 1.2rem + 2.4vw, 3rem);
+  line-height: 1.05;
+  color: var(--cream);
+  margin: 0 0 0.75rem;
+}
+.auth-aside__sub {
+  color: var(--ash);
+  margin: 0;
+  max-width: 26rem;
+}
+
+/* Logo */
+.auth-logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--cream);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.4rem;
+}
+.auth-logo .bi {
+  color: var(--brass);
+}
+@media (min-width: 992px) {
+  .auth-logo--mobile {
+    display: none;
+  }
+}
+
+/* Panel kanan (form) */
+.auth-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1.25rem;
+}
+.auth-card {
+  width: 100%;
+  max-width: 26rem;
+}
+.auth-heading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.9rem, 1.3rem + 2vw, 2.6rem);
+  color: var(--cream);
+  margin: 0 0 2rem;
+}
+
+/* Field */
+.auth-form .form-label {
+  color: var(--ash);
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+.auth-form .form-control {
+  background: #0c0c10;
+  border: 1px solid var(--slate);
+  color: var(--cream);
+  padding: 0.85rem 1rem;
+  border-radius: 0.7rem;
+  font-size: 1rem;
+}
+.auth-form .form-control::placeholder {
+  color: #6c6a64;
+}
+.auth-form .form-control:focus {
+  background: #0c0c10;
+  color: var(--cream);
+  border-color: var(--brass);
+  box-shadow: 0 0 0 0.2rem rgba(224, 169, 46, 0.18);
+}
+.auth-form .form-control.input-error {
+  border-color: var(--rust);
+}
+.auth-err {
+  color: var(--rust);
+  font-size: 0.8rem;
+  margin-top: 0.35rem;
+  min-height: 1rem;
+}
+
+/* Field kata sandi + tombol mata */
+.auth-pass {
+  position: relative;
+}
+.auth-pass .form-control {
+  padding-right: 3rem;
+}
+.auth-eye {
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  color: var(--ash);
+  width: 2.2rem;
+  height: 2.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 0.4rem;
+}
+.auth-eye:hover {
+  color: var(--cream);
+}
+
+/* Meteran kekuatan kata sandi */
+.auth-strength {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+.auth-strength span {
+  height: 5px;
+  border-radius: 999px;
+  background: var(--slate);
+  transition: background 0.2s ease;
+}
+.auth-strength__label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  margin-top: 0.3rem;
+}
+
+/* Link bawah & alert */
+.auth-alt {
+  text-align: center;
+  color: var(--ash);
+}
+.auth-alt a {
+  color: var(--brass);
+  font-weight: 600;
+  text-decoration: none;
+}
+.auth-alt a:hover {
+  text-decoration: underline;
+}
+.auth-alert {
+  margin-bottom: 1.25rem;
+}
+
+/* Mobile: pusatkan logo, eyebrow, heading */
+@media (max-width: 991.98px) {
+  .auth-logo--mobile {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .auth-card > .eyebrow,
+  .auth-heading {
+    text-align: center;
+  }
+}
