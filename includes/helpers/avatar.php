@@ -1,6 +1,6 @@
 <?php
 // Jika punya foto, tampilkan <img>
-// Jika belum, gunakan inisial dengan background brass.
+// Jika belum, buat inisialnya dan background nya brass.
 
 function render_avatar(?string $avatarUrl, string $username, int $size = 40, string $classes = ''): string
 {
@@ -8,10 +8,13 @@ function render_avatar(?string $avatarUrl, string $username, int $size = 40, str
     $fontSize = (int) ($size * 0.4);
     $baseClass = 'mvx-avatar ' . $classes;
 
-    if ($avatarUrl && file_exists(__DIR__ . '/../../' . $avatarUrl)) {
+    $diskPath = __DIR__ . '/../../' . ltrim((string) $avatarUrl, '/');
+
+    if ($avatarUrl && file_exists($diskPath)) {
+        $src = '/' . ltrim($avatarUrl, '/');
         return sprintf(
             '<img src="%s" alt="Avatar %s" width="%d" height="%d" class="%s" style="object-fit:cover;border-radius:50%%;">',
-            e($avatarUrl), e($username), $size, $size, e($baseClass)
+            e($src), e($username), $size, $size, e($baseClass)
         );
     }
 
