@@ -11,3 +11,7 @@
 
 # Log
 *.log
+
+# ignore avatar user files but keep the directory tracked by git
+assets/img/avatars/*
+!assets/img/avatars/.gitkeep
