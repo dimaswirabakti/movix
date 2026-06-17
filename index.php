@@ -60,9 +60,21 @@ $recentReviews = db()->query(
       <div class="d-flex flex-wrap gap-2">
         <a href="/pages/movie.php?id=<?= (int) $featured['id'] ?>" class="btn btn-brass px-4 py-2">Lihat Detail</a>
         <?php if ($loggedIn): ?>
-          <a href="/pages/movie.php?id=<?= (int) $featured['id'] ?>" class="btn btn-outline-cream px-4 py-2">
-            <i class="bi bi-plus-lg me-1"></i> Watchlist
-          </a>
+          <?php
+            $heroInWatchlist = false;
+            $hw = db()->prepare('SELECT 1 FROM watchlist WHERE user_id = ? AND movie_id = ?');
+            $hw->execute([(int) $_SESSION['user_id'], (int) $featured['id']]);
+            $heroInWatchlist = (bool) $hw->fetchColumn();
+          ?>
+          <form method="POST" action="/pages/movie.php?id=<?= (int) $featured['id'] ?>" class="d-inline">
+            <input type="hidden" name="action" value="watchlist_toggle">
+            <input type="hidden" name="movie_id" value="<?= (int) $featured['id'] ?>">
+            <input type="hidden" name="return" value="/index.php">
+            <button type="submit" class="btn <?= $heroInWatchlist ? 'btn-brass' : 'btn-outline-cream' ?> px-4 py-2">
+              <i class="bi <?= $heroInWatchlist ? 'bi-check-lg' : 'bi-plus-lg' ?> me-1"></i>
+              <?= $heroInWatchlist ? 'Di Watchlist' : 'Watchlist' ?>
+            </button>
+          </form>
         <?php endif; ?>
       </div>
     </div>
