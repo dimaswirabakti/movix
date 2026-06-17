@@ -43,8 +43,18 @@
   color: var(--cream);
   border-color: var(--brass);
 }
-.navbar-search { align-items: center; gap: .35rem; }
-.navbar-search .search-input { width: 220px; max-width: 60vw; }
+.navbar-search {
+  align-items: center;
+  gap: 0.35rem;
+}
+.navbar-search .search-input {
+  width: 220px;
+  max-width: 60vw;
+}
+.navbar-movix .nav-link.active,
+.navbar-movix .nav-link:focus-visible {
+  color: var(--brass);
+}
 
 /* Avatar bulat dengan inisial usernya */
 .avatar {
