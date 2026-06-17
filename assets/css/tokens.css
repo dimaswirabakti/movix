@@ -3,6 +3,71 @@
    Override Bootstrap 5.3 lewat CSS variables + komponen kustom
    ========================================================= */
 
+/* Font lokal */
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/fraunces-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/fraunces-600.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/fraunces-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/hankengrotesk-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/hankengrotesk-500.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/hankengrotesk-600.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/hankengrotesk-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/spacemono-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/spacemono-700.woff2") format("woff2");
+}
+
 :root {
   --ink: #0e0e12;
   --charcoal: #17171f;
