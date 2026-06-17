@@ -786,3 +786,132 @@
 .sv-meta .star {
   color: var(--brass);
 }
+
+/* =========================================================
+   HALAMAN PROFILE USER
+   ========================================================= */
+.profile-head {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.profile-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--cream);
+  font-size: clamp(1.8rem, 1.3rem + 2vw, 2.6rem);
+  margin: 0;
+}
+.profile-since {
+  font-family: var(--font-mono);
+  color: var(--ash);
+  font-size: 0.85rem;
+}
+.profile-rule {
+  border-color: var(--slate);
+  opacity: 1;
+  margin: 2rem 0;
+}
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .profile-stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.stat-num {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--brass);
+  font-size: 2.4rem;
+  line-height: 1;
+}
+.stat-label {
+  font-family: var(--font-mono);
+  color: var(--ash);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  margin-top: 0.4rem;
+}
+.profile-tabs {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0 0 2rem;
+  border-bottom: 1px solid var(--slate);
+}
+.profile-tab {
+  background: none;
+  border: 0;
+  color: var(--ash);
+  padding: 0.6rem 0;
+  font-size: 1rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+.profile-tab:hover {
+  color: var(--cream);
+}
+.profile-tab.is-active {
+  color: var(--brass);
+  border-bottom-color: var(--brass);
+}
+.profile-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background: var(--charcoal);
+  border: 1px solid var(--slate);
+  border-radius: 0.8rem;
+  padding: 1rem 1.25rem;
+  text-decoration: none;
+}
+.profile-row:hover {
+  border-color: var(--ash);
+}
+.profile-row__poster {
+  width: 56px;
+  aspect-ratio: 2/3;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  background: var(--ink);
+  flex-shrink: 0;
+}
+.profile-row__poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.profile-row__title {
+  font-family: var(--font-display);
+  color: var(--cream);
+  font-size: 1.1rem;
+  margin: 0 0 0.3rem;
+}
+.profile-row__meta {
+  font-family: var(--font-mono);
+  color: var(--ash);
+  font-size: 0.82rem;
+}
+.profile-row__meta .star {
+  color: var(--brass);
+}
+.profile-empty {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+.profile-empty h2 {
+  font-family: var(--font-display);
+  color: var(--cream);
+}
+.profile-empty a {
+  text-decoration: none;
+}
