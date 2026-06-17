@@ -24,3 +24,11 @@ function format_duration(?int $min): string
     if ($m) $out[] = $m . 'm';
     return implode(' ', $out);
 }
+
+// Bangun ulang query string saat ini, override beberapa parameter.
+function query_with(array $overrides): string
+{
+    $params = array_merge($_GET, $overrides);
+    $params = array_filter($params, fn($v) => $v !== '' && $v !== null);
+    return '?' . http_build_query($params);
+}

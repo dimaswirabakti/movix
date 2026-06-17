@@ -191,3 +191,114 @@
   object-fit: cover;
   display: block;
 }
+
+/* =========================================================
+   DAFTAR FILM
+   ========================================================= */
+.catalog-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.catalog-count {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--ash);
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+.filter-search {
+  position: relative;
+  flex: 1 1 220px;
+  max-width: 360px;
+}
+.filter-search .bi-search {
+  position: absolute;
+  left: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--ash);
+}
+.filter-search input {
+  padding-left: 2.4rem;
+}
+
+.filter-pill {
+  background: var(--charcoal);
+  border: 1px solid var(--slate);
+  color: var(--cream);
+  border-radius: 0.6rem;
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+}
+.filter-pill:hover {
+  border-color: var(--ash);
+}
+.filter-pill.is-active {
+  border-color: var(--brass);
+  color: var(--brass);
+}
+.filter-pill--clear {
+  color: var(--ash);
+  border-style: dashed;
+}
+.filter-pill--clear:hover {
+  color: var(--rust);
+  border-color: var(--rust);
+}
+
+.catalog-empty {
+  text-align: center;
+  padding: 5rem 1rem;
+}
+.catalog-empty h2 {
+  font-family: var(--font-display);
+  color: var(--cream);
+}
+.catalog-empty p {
+  color: var(--ash);
+}
+
+.pagination-mvx {
+  display: flex;
+  justify-content: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  margin-top: 2.5rem;
+}
+.pagination-mvx a,
+.pagination-mvx span {
+  min-width: 2.2rem;
+  height: 2.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  color: var(--ash);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.pagination-mvx a:hover {
+  background: var(--slate);
+  color: var(--cream);
+}
+.pagination-mvx .is-current {
+  background: var(--brass);
+  color: var(--ink);
+  font-weight: 700;
+}
+.pagination-mvx .is-disabled {
+  opacity: 0.35;
+  pointer-events: none;
+}
