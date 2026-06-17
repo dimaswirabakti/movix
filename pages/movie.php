@@ -46,7 +46,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
-    header('Location: /pages/movie.php?id=' . $movieId);
+    $return = $_POST['return'] ?? '';
+    if (is_string($return) && $return !== '' && $return[0] === '/' && !str_starts_with($return, '//')) {
+        header('Location: ' . $return);
+    } else {
+        header('Location: /pages/movie.php?id=' . $movieId);
+    }
     exit;
 }
 
