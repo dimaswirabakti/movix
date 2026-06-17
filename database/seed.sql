@@ -390,3 +390,353 @@ SET
     backdrop_url = 'https://image.tmdb.org/t/p/w1280/6WBIzCgmDCYrqh64yDREGeDk9d3.jpg'
 WHERE
     id = 12;
+
+-- ============================================================
+--  TAMBAHAN 13 FILM (total jadi 25 film)
+-- ============================================================
+
+INSERT INTO
+    movies (
+        title,
+        release_year,
+        duration_min,
+        director,
+        synopsis
+    )
+VALUES (
+        'Fight Club',
+        1999,
+        139,
+        'David Fincher',
+        'Seorang pekerja kantoran insomnia membentuk klub tinju bawah tanah bersama pembuat sabun misterius.'
+    ),
+    (
+        'Forrest Gump',
+        1994,
+        142,
+        'Robert Zemeckis',
+        'Kisah hidup seorang pria sederhana dari Alabama yang tanpa sengaja terlibat dalam peristiwa-peristiwa besar sejarah Amerika.'
+    ),
+    (
+        'Goodfellas',
+        1990,
+        146,
+        'Martin Scorsese',
+        'Perjalanan seorang pemuda yang naik pangkat dalam dunia mafia New York selama tiga dekade.'
+    ),
+    (
+        'The Lord of the Rings: The Fellowship of the Ring',
+        2001,
+        178,
+        'Peter Jackson',
+        'Seorang hobbit harus menghancurkan cincin sakti untuk menyelamatkan Middle-earth dari kegelapan.'
+    ),
+    (
+        'Coco',
+        2017,
+        105,
+        'Lee Unkrich',
+        'Seorang anak laki-laki tersesat di Tanah Para Arwah dan menemukan rahasia keluarganya lewat musik.'
+    ),
+    (
+        'The Grand Budapest Hotel',
+        2014,
+        99,
+        'Wes Anderson',
+        'Petualangan seorang concierge legendaris dan tangan kanannya di sebuah hotel mewah Eropa antar perang.'
+    ),
+    (
+        'Joker',
+        2019,
+        122,
+        'Todd Phillips',
+        'Seorang komedian gagal di Gotham perlahan berubah menjadi sosok kriminal ikonik.'
+    ),
+    (
+        'Coraline',
+        2009,
+        100,
+        'Henry Selick',
+        'Gadis kecil menemukan dunia paralel yang awalnya tampak sempurna namun menyimpan rahasia mengerikan.'
+    ),
+    (
+        'Her',
+        2013,
+        126,
+        'Spike Jonze',
+        'Seorang pria kesepian menjalin hubungan emosional dengan asisten kecerdasan buatan di ponselnya.'
+    ),
+    (
+        'Knives Out',
+        2019,
+        130,
+        'Rian Johnson',
+        'Detektif piawai menyelidiki kematian misterius seorang penulis novel kaya raya di rumahnya sendiri.'
+    ),
+    (
+        'Spider-Man: Into the Spider-Verse',
+        2018,
+        117,
+        'Bob Persichetti',
+        'Remaja dari semesta paralel menemukan dirinya adalah salah satu dari banyak Spider-Man di multisemesta.'
+    ),
+    (
+        'Get Out',
+        2017,
+        104,
+        'Jordan Peele',
+        'Seorang pria kulit hitam mengunjungi keluarga pacarnya dan menemukan kebenaran mengerikan di baliknya.'
+    ),
+    (
+        'Amélie',
+        2001,
+        122,
+        'Jean-Pierre Jeunet',
+        'Seorang pelayan kafe pemalu di Paris diam-diam mengubah kehidupan orang-orang di sekitarnya.'
+    );
+
+INSERT INTO
+    movie_genres (movie_id, genre_id)
+VALUES (13, 1),
+    (13, 5),
+    (14, 1),
+    (14, 8),
+    (15, 1),
+    (15, 2),
+    (16, 8),
+    (16, 4),
+    (17, 1),
+    (17, 6),
+    (17, 7),
+    (18, 1),
+    (19, 1),
+    (19, 5),
+    (19, 2),
+    (20, 5),
+    (20, 6),
+    (21, 1),
+    (21, 4),
+    (22, 5),
+    (22, 2),
+    (23, 6),
+    (23, 3),
+    (23, 8),
+    (24, 5),
+    (25, 1);
+
+INSERT INTO
+    reviews (
+        user_id,
+        movie_id,
+        rating,
+        review_text
+    )
+VALUES (
+        1,
+        13,
+        9,
+        'Plot twist yang mengubah cara menonton film ini dua kali.'
+    ),
+    (
+        2,
+        13,
+        9,
+        'Tyler Durden adalah karakter paling memorable dekade itu.'
+    ),
+    (
+        2,
+        14,
+        8,
+        'Tom Hanks luar biasa, ceritanya menyentuh dari awal sampai akhir.'
+    ),
+    (
+        3,
+        14,
+        9,
+        'Sejarah Amerika dibungkus jadi kisah personal yang hangat.'
+    ),
+    (
+        1,
+        15,
+        9,
+        'Narasi cepat dan tegang, gaya Scorsese yang khas.'
+    ),
+    (
+        3,
+        15,
+        8,
+        'Salah satu film mafia terbaik selain Godfather.'
+    ),
+    (
+        2,
+        16,
+        9,
+        'Dunia fantasi paling detail yang pernah dibuat ke layar lebar.'
+    ),
+    (
+        1,
+        16,
+        8,
+        'Awal trilogi yang megah dan tidak terasa selama tiga jam.'
+    ),
+    (
+        3,
+        17,
+        9,
+        'Visual dan musiknya bikin nangis, animasi Pixar terbaik.'
+    ),
+    (
+        1,
+        18,
+        8,
+        'Estetika Wes Anderson di puncaknya, lucu dan menawan.'
+    ),
+    (
+        2,
+        19,
+        9,
+        'Joaquin Phoenix benar-benar transformasi total ke karakter ini.'
+    ),
+    (
+        3,
+        19,
+        8,
+        'Gelap, meresahkan, tapi sinematografinya indah sekali.'
+    ),
+    (
+        1,
+        20,
+        7,
+        'Animasi stop-motion yang menyeramkan tapi memukau.'
+    ),
+    (
+        2,
+        21,
+        8,
+        'Konsep cinta dengan AI yang dieksplor dengan sangat halus.'
+    ),
+    (
+        3,
+        22,
+        8,
+        'Misteri detektif modern dengan plot yang rapi dan twist menyenangkan.'
+    ),
+    (
+        1,
+        22,
+        9,
+        'Daniel Craig tampil beda dan mengejutkan sekali di film ini.'
+    ),
+    (
+        2,
+        23,
+        9,
+        'Gaya visual komik yang revolusioner untuk film animasi.'
+    ),
+    (
+        3,
+        24,
+        8,
+        'Tegang dan penuh komentar sosial yang tajam.'
+    ),
+    (
+        1,
+        25,
+        8,
+        'Manis, eksentrik, dan khas Paris banget.'
+    );
+
+-- ============================================================
+--  GAMBAR UNTUK 13 FILM TAMBAHAN (poster + backdrop dari TMDB)
+-- ============================================================
+
+UPDATE movies
+SET
+    poster_url = 'https://media.themoviedb.org/t/p/w440_and_h660_face/lKFUMEnMCXIsWYPR0gba7eF6nlt.jpg',
+    backdrop_url = 'https://media.themoviedb.org/t/p/w1066_and_h600_face/nlDmuxSjJS1Fi2FgVToPm9ytm5S.jpg'
+WHERE
+    id = 13;
+
+UPDATE movies
+SET
+    poster_url = 'https://media.themoviedb.org/t/p/w440_and_h660_face/Cw4hIUIAmSYfK9QfaUW5igp9La.jpg',
+    backdrop_url = 'https://media.themoviedb.org/t/p/w1066_and_h600_face/66Kn4XWhkuPkJxOJyPEx4U2CUfN.jpg'
+WHERE
+    id = 14;
+
+UPDATE movies
+SET
+    poster_url = 'https://media.themoviedb.org/t/p/w440_and_h660_face/6QMSLvU5ziIL2T6VrkaKzN2YkxK.jpg',
+    backdrop_url = 'https://media.themoviedb.org/t/p/w1066_and_h600_face/gILte6Zd7m1YneIr6MVhh30S9pr.jpg'
+WHERE
+    id = 15;
+
+UPDATE movies
+SET
+    poster_url = 'https://media.themoviedb.org/t/p/w440_and_h660_face/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg',
+    backdrop_url = 'https://media.themoviedb.org/t/p/w1066_and_h600_face/oiwc338EoBgS4sEI2ixAny4KQKg.jpg'
+WHERE
+    id = 16;
+
+UPDATE movies
+SET
+    poster_url = 'https://media.themoviedb.org/t/p/w440_and_h660_face/iDstnnDc9olbYNdtMwlSNmh6be.jpg',
+    backdrop_url = 'https://media.themoviedb.org/t/p/w1066_and_h600_face/lxfCCC41yC4KEHBYtB7E0YsWA9c.jpg'
+WHERE
+    id = 17;
+
+UPDATE movies
+SET
+    poster_url = 'https://media.themoviedb.org/t/p/w440_and_h660_face/eWdyYQreja6JGCzqHWXpWHDrrPo.jpg',
+    backdrop_url = 'https://media.themoviedb.org/t/p/w1066_and_h600_face/9udCLTxTFl28RxnK8Q05E154ZGa.jpg'
+WHERE
+    id = 18;
+
+UPDATE movies
+SET
+    poster_url = 'https://media.themoviedb.org/t/p/w440_and_h660_face/3PbUQVxUgF4FVs6BKpIMwzcALQD.jpg',
+    backdrop_url = 'https://media.themoviedb.org/t/p/w1066_and_h600_face/hO7KbdvGOtDdeg0W4Y5nKEHeDDh.jpg'
+WHERE
+    id = 19;
+
+UPDATE movies
+SET
+    poster_url = 'https://media.themoviedb.org/t/p/w440_and_h660_face/4jeFXQYytChdZYE9JYO7Un87IlW.jpg',
+    backdrop_url = 'https://media.themoviedb.org/t/p/w1066_and_h600_face/8GHxjXlI5rqyTBuVNekGTPjG5T6.jpg'
+WHERE
+    id = 20;
+
+UPDATE movies
+SET
+    poster_url = 'https://media.themoviedb.org/t/p/w440_and_h660_face/2TgMIvBbLaSNqP7IIpQ19b9BNeJ.jpg',
+    backdrop_url = 'https://media.themoviedb.org/t/p/w1066_and_h600_face/nG5zmbVeYlcDhckrPAe06fArywn.jpg'
+WHERE
+    id = 21;
+
+UPDATE movies
+SET
+    poster_url = 'https://media.themoviedb.org/t/p/w440_and_h660_face/pThyQovXQrw2m0s9x82twj48Jq4.jpg',
+    backdrop_url = 'https://media.themoviedb.org/t/p/w1066_and_h600_face/AbRYlvwAKHs0YuyNO6NX9ofq4l6.jpg'
+WHERE
+    id = 22;
+
+UPDATE movies
+SET
+    poster_url = 'https://media.themoviedb.org/t/p/w440_and_h660_face/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg',
+    backdrop_url = 'https://media.themoviedb.org/t/p/w1066_and_h600_face/9xfDWXAUbFXQK585JvByT5pEAhe.jpg'
+WHERE
+    id = 23;
+
+UPDATE movies
+SET
+    poster_url = 'https://media.themoviedb.org/t/p/w440_and_h660_face/mE24wUCfjK8AoBBjaMjho7Rczr7.jpg',
+    backdrop_url = 'https://media.themoviedb.org/t/p/w1066_and_h600_face/o8dPH0ZSIyyViP6rjRX1djwCUwI.jpg'
+WHERE
+    id = 24;
+
+UPDATE movies
+SET
+    poster_url = 'https://media.themoviedb.org/t/p/w440_and_h660_face/nSxDa3M9aMvGVLoItzWTepQ5h5d.jpg',
+    backdrop_url = 'https://media.themoviedb.org/t/p/w1066_and_h600_face/2WyjkKudTkDgtZo9CIN8NoPGHRB.jpg'
+WHERE
+    id = 25;
