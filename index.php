@@ -1,20 +1,9 @@
 <?php
-require_once __DIR__ . '/includes/header.php';
-
-if (!function_exists('format_duration')) {
-    function format_duration(?int $min): string {
-        if (!$min) return '';
-        $h = intdiv($min, 60); $m = $min % 60;
-        $out = [];
-        if ($h) $out[] = $h . 'j';
-        if ($m) $out[] = $m . 'm';
-        return implode(' ', $out);
-    }
-}
+require_once __DIR__ . '/includes/partials/header.php';
 
 /* ---------- Data Beranda ---------- */
 
-// 1) Hero: film rating tertinggi + backdrop + genre
+// Hero Section: film rating tertinggi + backdrop + genre
 $featured = db()->query(
     "SELECT m.id, m.title, m.release_year, m.duration_min, m.synopsis,
             m.backdrop_url, m.avg_rating,
@@ -28,7 +17,7 @@ $featured = db()->query(
      LIMIT 1"
 )->fetch();
 
-// 2) Rating Tertinggi (7 teratas yang sudah punya ulasan)
+// Rating Tertinggi (7 teratas yang sudah punya ulasan)
 $topRated = db()->query(
     "SELECT id, title, release_year, avg_rating, poster_url
      FROM movies WHERE review_count > 0
@@ -36,10 +25,10 @@ $topRated = db()->query(
      LIMIT 7"
 )->fetchAll();
 
-// 3) Genre
+// Genre
 $genres = db()->query("SELECT id, name FROM genres ORDER BY id")->fetchAll();
 
-// 4) Baru Diulas (3 ulasan terbaru)
+// Baru Diulas (3 ulasan terbaru)
 $recentReviews = db()->query(
     "SELECT r.rating, r.review_text, r.created_at,
             u.username, m.id AS movie_id, m.title, m.poster_url
@@ -153,4 +142,4 @@ $recentReviews = db()->query(
   <?php endif; ?>
 </section>
 
-<?php require_once __DIR__ . '/includes/footer.php'; ?>
+<?php require_once __DIR__ . '/includes/partials/footer.php'; ?>
